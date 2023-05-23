@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--=============== REMIXICONS ===============-->
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+     <!--=============== CSS ===============-->
+     <link rel="stylesheet" href="/assets/css/styles.css">
+ 
+
+    <title>Register</title>
+</head>
+<body>
+    <div class="login2">
+        <img src="/assets/img/login-bg.png" alt="login image" class="login__img2">
+
+        <form action="/users/register" method="POST" class="login__form2">
+
+            <h1 class="login__title2">Register</h1>
+
+            <ul>
+                <% if(typeof errors != 'undefined') { %> <% errors.forEach(error => { %>
+                        <li><%= error.message %></li>
+                  <%  }) %> <% } %>
+            </ul>
+
+            <div class="login__content2">
+
+                <div class="login__box2">
+                    <i class="ri-user-3-line login__icon2"></i>
+                    
+                    <div class="login__box-input2">
+                       <input type="text" id="name" name="name" required class="login__input2" placeholder="" >
+                       <label for="" class="login__label2">Name</label>
+                    </div>
+                 </div><br>
+               
+                <div class="login__box2">
+                  <i class="ri-mail-line login__icon2"></i>
+                  
+                  <div class="login__box-input2">
+                     <input type="email" id="email" name="email" required class="login__input2" placeholder="" >
+                     <label for="" class="login__label2">Email</label>
+                  </div>
+               </div><br>
+
+               <div class="login__box2">
+                    <i class="ri-user-3-line login__icon2 "></i>
+                
+                    <div class="login__box-input2">
+                        <input type="password" id="password" name="password" required class="login__input2" id="login-pass" placeholder="" >
+                        <label for="" class="login__label2">Password</label>
+                        <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+                    </div>
+             </div><br>
+               
+             <div class="login__box2">
+                <i class="ri-user-3-line login__icon2"></i>
+            
+                <div class="login__box-input2">
+                    <input type="password" id="password2" name="password2" required class="login__input2" id="login-pass" placeholder="" >
+                    <label for="" class="login__label2">Confirm Password</label>
+                    <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+                </div>
+         </div><br>
+
+
+            </div>
+
+            <div class="login__check2">
+                <div class="login__check-group2">
+                   <input type="checkbox" class="login__check-input2">
+                   <label for="" class="login__check-label2">Remember me</label>
+                   <p class="login__register2">Already Registered? <a href="/users/login">Login</a>
+                   </p>
+                </div>
+            </div>
+             
+             <button class="login__button2" type="submit">Register</button>
+        
+        </form>
+    </div>
+
+
+
+<!--=============== MAIN JS ===============-->
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
